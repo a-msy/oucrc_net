@@ -2129,7 +2129,7 @@ input, select, textarea {
 				}
 
 				.main.style2 .button.anchored {
-					display: none;
+					/* display: none; */
 				}
 
 				.main.style2 .content {
@@ -2268,7 +2268,14 @@ input, select, textarea {
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
 	}
+/* Three */
 
+#three {
+	background: url("images/overlay.png"), url("../../images/one.jpg");
+	background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+}
 /* Contact */
 
 	#contact {
@@ -2310,3 +2317,9 @@ input, select, textarea {
 			}
 
 		}
+
+.logo-fit img {
+	max-width:480px; /* 画像の最大幅 */
+	height: 100%;
+	padding: 1px;
+}
