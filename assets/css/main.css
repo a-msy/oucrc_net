@@ -2176,8 +2176,8 @@ input, select, textarea {
 		margin: 0;
 		line-height: 1em;
 		padding: 1.5em;
-		background: #39454b;
-		color: rgba(185, 186, 187, 0.5);
+		background: #48a9a6;
+		color:#000;
 		overflow: hidden;
 	}
 
@@ -2244,7 +2244,7 @@ input, select, textarea {
 /* Intro */
 
 	#intro {
-		background: url("images/overlay.png"), url("../../images/intro.jpg");
+		background: url("images/overlay.png"), url("../../images/top.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, bottom center;
@@ -2263,7 +2263,7 @@ input, select, textarea {
 /* Two */
 
 	#two {
-		background: url("images/overlay.png"), url("../../images/two.jpg");
+		background: url("images/overlay.png"), url("../../images/two.png");
 		background-size: 256px 256px, cover;
 		background-attachment: fixed, fixed;
 		background-position: top left, center center;
@@ -2324,6 +2324,7 @@ input, select, textarea {
 	padding: 1px;
 }
 
+
 /* Q & A　CSS*/
 .cp_qa *, .cp_qa *:after, .cp_qa *:before {
 	font-family: 'FontAwesome', sans-serif;
@@ -2339,11 +2340,12 @@ input, select, textarea {
 }
 .cp_qa dt {
 	margin: 0 3em 1em 3em;
-	background: #ffe0b2;
+	background: #d33f49;
+	color:#fff;
 }
 .cp_qa dd {
 	margin: 0 3em 3em 3em;
-	background: #b2ebf2;
+	background: #a8dabc;
 }
 /* 吹き出し▶︎ */
 .cp_qa dt::before,.cp_qa dd::before{
@@ -2360,13 +2362,13 @@ input, select, textarea {
 .cp_qa dt::before {
 	left: -0.5em;
 	border-width: 10px 10px 10px 0;
-	border-color: transparent #ffe0b2 transparent transparent;
+	border-color: transparent #d33f49 transparent transparent;
 }
 /* 答え吹き出し▶︎ */
 .cp_qa dd::before {
 	right: -0.5em;
 	border-width: 10px 0 10px 10px;
-	border-color: transparent transparent transparent #b2ebf2;
+	border-color: transparent transparent transparent #a8dabc;
 }
 /* ?!アイコン */
 .cp_qa dt::after,.cp_qa dd::after {
@@ -2386,7 +2388,7 @@ input, select, textarea {
 	margin: 0  0 0;
 	padding: 0.18em 0.32em;
 	content: 'Q';
-	background: #f57c00;
+	background: #d33f49;
 }
 /* !アイコン */
 .cp_qa dd::after {
@@ -2394,7 +2396,7 @@ input, select, textarea {
 	margin: 0 0 0 0em;
 	padding: 0.2em 0.4em;
 	content: 'A';
-	background: #0097a7;
+	background: #a8dabc;
 }
 
 /* * MEMBERS CSS* */
@@ -2487,3 +2489,19 @@ ul {
 	  color: #fff;
   }
   }
+
+  /* ABout US */
+.about{
+	position: relative;
+}
+
+
+.about li {
+	word-wrap:inherit;
+	padding: 0.5em;
+	margin-bottom: 3px;
+	line-height: 1.5;
+	border-left: solid 6px #1A237E;
+	background: #80DEEA;
+	color:#1A237E;
+}
