@@ -2398,18 +2398,92 @@ input, select, textarea {
 }
 
 /* * MEMBERS CSS* */
-ul{
-	width: 100%;
-	border-spacing: 0;
+ul {
+	border-collapse: collapse;
+	margin: 0 auto;
+	padding: 0;
+	width: 650px;
+	table-layout: fixed;
   }
   
-  ul th{
-	border-bottom: solid 2px #fb5144;
-	padding: 10px 0;
+  ul tr {
+	background-color: #e6f2f5;
+	padding: .35em;
+	border-bottom: 2px solid #fff;
   }
-  
-  ul td{
-	border-bottom: solid 2px #ddd;
-	text-align: center;
-	padding: 10px 0;
+  ul th,
+  ul td {
+	padding: 1em 10px 1em 1em;
+	border-right: 2px solid #fff;
+  }
+  ul th {
+	font-size: .85em;
+  }
+  ul thead tr{
+	background-color: #167F92;
+	color:#fff;
+  }
+  ul tbody th {
+	  background: #78bbc7;
+	  color: #fff;
+  }
+  .txt{
+	 text-align: left;
+	 font-size: .85em;
+  }
+  .price{
+	text-align: right;
+	color: #167F92;
+	font-weight: bold;
+  }
+  .non{
+	background:#fff
+  }
+  @media screen and (max-width: 600px) {
+	ul {
+	  border: 0;
+	  width:100%
+	}
+	ul th{
+	  background-color: #167F92;
+	  display: block;
+	  border-right: none;
+	}
+	ul thead {
+	  border: none;
+	  clip: rect(0 0 0 0);
+	  height: 1px;
+	  margin: -1px;
+	  overflow: hidden;
+	  padding: 0;
+	  position: absolute;
+	  width: 1px;
+	}
+	ul tr {
+	  display: block;
+	  margin-bottom: .625em;
+	}
+	ul td {
+	  border-bottom: 1px solid #bbb;
+	  display: block;
+	  font-size: .8em;
+	  text-align: right;
+	  position: relative;
+	  padding: .625em .625em .625em 4em;
+	  border-right: none;
+	}
+	
+	ul td::before {
+	  content: attr(data-label);
+	  font-weight: bold;
+	  position: absolute;
+	  left: 10px;
+	  color: #167F92;
+	}
+	ul td:last-child {
+	  border-bottom: 0;
+	}
+	ul tbody th {
+	  color: #fff;
+  }
   }

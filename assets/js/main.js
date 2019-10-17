@@ -223,7 +223,7 @@ $(function(){
 			if(this[0] && this[1] && this[2] && this[3]){
 				$("#itemlist")
 				.append(
-					"<tr><th>"+this[0]+"</th><td>"+this[1]+"</td><td>"+this[2]+"</td><td>"+this[3]+"</td></tr>"
+					"<tr><td>"+this[0]+"</td><th>"+this[1]+"</th><th>"+this[2]+"</th><th>"+this[3]+"</th></tr>"
 				);
 			}
 		})
