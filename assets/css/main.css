@@ -2492,16 +2492,22 @@ ul {
 
   /* ABout US */
 .about{
-	position: relative;
+position: relative;
+  }
+
+.about ul{
+	width:100%;
+	padding:0.5em;
+	list-style-type:none;
 }
-
-
 .about li {
-	word-wrap:inherit;
-	padding: 0.5em;
-	margin-bottom: 3px;
-	line-height: 1.5;
-	border-left: solid 6px #1A237E;
-	background: #80DEEA;
-	color:#1A237E;
+	position: absolute;
+	content: '';
+	display: block;
+	top: 0.5em;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	border-right: 3px solid #00BCD4;
+	border-bottom: 3px solid #00BCD4;
 }
