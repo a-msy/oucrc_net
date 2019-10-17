@@ -215,19 +215,53 @@
 			.on('load', function() {
 				$window.trigger('resize');
 			});
-
-$(function(){
-	$.get('assets/csv/itemlist.csv',function(data){
-		var csv = $.csv()(data);
-		$(csv).each(function(){
-			if(this[0] && this[1] && this[2] && this[3]){
-				$("#itemlist")
-				.append(
-					"<tr><td>"+this[0]+"</td><th>"+this[1]+"</th><th>"+this[2]+"</th><th>"+this[3]+"</th></tr>"
-				);
+// csv から　HTML現役生
+			function readCsv(data) {
+				var target = '#csv-body';
+				var csvlist = $.csv.toArrays(data);
+				var insert = '';
+				for (var i = 0; i < csvlist.length; i++) {
+					insert += "<tr>";
+					insert += "<th>"+csvlist[i][0]+"</th>";
+					if(csvlist[i][1]!=''){
+						insert += '<td data-label="役職 : " class="txt">'+csvlist[i][1]+'</td>';
+					}
+					else{
+						insert += '<td data-label="" class="txt">'+''+'</td>';
+					}
+					insert += '<td data-label="してること : " class="txt">'+csvlist[i][2]+'</td>';
+					insert += '<td data-label="ひとこと : " class="txt">'+csvlist[i][3]+'</td>';
+					insert += "</tr>";
+				}
+				$(target).append(insert);
 			}
-		})
-	})
-});
+			var csvfile = 'assets/csv/itemlist.csv';
+			$(function(){
+				$.get(csvfile, readCsv, 'text');
+			});
+// OBOGcsv
+			function readCsv2(data) {
+				var target = '#csv-og';
+				var csvlist = $.csv.toArrays(data);
+				var insert = '';
+				for (var i = 0; i < csvlist.length; i++) {
+					insert += "<tr>";
+					insert += "<th>"+csvlist[i][0]+"</th>";
+					if(csvlist[i][1]!=''){
+						insert += '<td data-label="役職 : " class="txt">'+csvlist[i][1]+'</td>';
+					}
+					else{
+						insert += '<td data-label="" class="txt">'+''+'</td>';
+					}
+					insert += '<td data-label="してること : " class="txt">'+csvlist[i][2]+'</td>';
+					insert += '<td data-label="ひとこと : " class="txt">'+csvlist[i][3]+'</td>';
+					insert += "</tr>";
+				}
+				$(target).append(insert);
+			}
+			var csvfile2 = 'assets/csv/itemlist.csv';
+			$(function(){
+				$.get(csvfile2, readCsv2, 'text');
+			});
 
 })(jQuery);

@@ -2400,38 +2400,38 @@ input, select, textarea {
 }
 
 /* * MEMBERS CSS* */
-ul {
+table {
 	border-collapse: collapse;
 	margin: 0 auto;
 	padding: 0;
-	width: 650px;
+	width: 100%;
 	table-layout: fixed;
   }
   
-  ul tr {
+  table tr {
 	background-color: #e6f2f5;
 	padding: .35em;
 	border-bottom: 2px solid #fff;
   }
-  ul th,
-  ul td {
+  table th,
+  table td {
 	padding: 1em 10px 1em 1em;
 	border-right: 2px solid #fff;
   }
-  ul th {
+  table th {
 	font-size: .85em;
   }
-  ul thead tr{
+  table thead tr{
 	background-color: #167F92;
 	color:#fff;
   }
-  ul tbody th {
+  table tbody th {
 	  background: #78bbc7;
 	  color: #fff;
   }
   .txt{
-	 text-align: left;
 	 font-size: .85em;
+	 text-align: left;
   }
   .price{
 	text-align: right;
@@ -2441,17 +2441,17 @@ ul {
   .non{
 	background:#fff
   }
-  @media screen and (max-width: 600px) {
-	ul {
+  @media screen and (max-width: 735px) {
+	table {
 	  border: 0;
 	  width:100%
 	}
-	ul th{
+	table th{
 	  background-color: #167F92;
 	  display: block;
 	  border-right: none;
 	}
-	ul thead {
+	table thead {
 	  border: none;
 	  clip: rect(0 0 0 0);
 	  height: 1px;
@@ -2461,53 +2461,57 @@ ul {
 	  position: absolute;
 	  width: 1px;
 	}
-	ul tr {
+	table tr {
 	  display: block;
 	  margin-bottom: .625em;
 	}
-	ul td {
+	table td {
 	  border-bottom: 1px solid #bbb;
 	  display: block;
 	  font-size: .8em;
-	  text-align: right;
 	  position: relative;
-	  padding: .625em .625em .625em 4em;
+	  padding: .625em;
 	  border-right: none;
 	}
 	
-	ul td::before {
+	table td::before {
 	  content: attr(data-label);
 	  font-weight: bold;
-	  position: absolute;
-	  left: 10px;
+	  position: relative;
+	  text-align: right;
 	  color: #167F92;
 	}
-	ul td:last-child {
+	table td:last-child {
 	  border-bottom: 0;
 	}
-	ul tbody th {
+	table tbody th {
 	  color: #fff;
   }
   }
-
   /* ABout US */
 .about{
-position: relative;
-  }
+	position: relative;
+}
 
-.about ul{
-	width:100%;
+ul.cp_list {
 	padding:0.5em;
 	list-style-type:none;
+	width:100%;
 }
-.about li {
-	position: absolute;
-	content: '';
-	display: block;
+
+ul.cp_list li {
+	position:relative;
+	padding: 0em 0.3em 0.3em 1.3em;
+}
+
+ul.cp_list li:before {
+	position:absolute;
+	content:'';
 	top: 0.5em;
-	left: 0;
-	width: 6px;
-	height: 6px;
-	border-right: 3px solid #00BCD4;
-	border-bottom: 3px solid #00BCD4;
+	left: 0.2em;
+	height:0;
+	width:0;
+	border-style: solid;
+	border-width: 6px 0 6px 9px;
+	border-color: transparent transparent transparent #3F51B5;
 }
