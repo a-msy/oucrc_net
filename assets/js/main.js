@@ -271,7 +271,7 @@
 	  				$(this).next().toggleClass("onanimation");
 	  				$('ul li').hide();
 	  				$('ul li').each(function(i) {
-	 	 		$(this).delay(10 * i).fadeIn(500);
+	 	 				$(this).fadeIn(1);
 	  				});
 				});
 			});
