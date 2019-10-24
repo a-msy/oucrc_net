@@ -1922,13 +1922,13 @@ input, select, textarea {
 		}
 
 	body {
-		padding-top: 3em;
+		padding-top: 0em;
 	}
 
 		@media screen and (max-width: 736px) {
 
 			body {
-				padding-top: 2.5em;
+				padding-top: 0em;
 			}
 
 		}
@@ -2312,10 +2312,10 @@ input, select, textarea {
 		}
 
 		#contact.inactive .box {
-			-moz-transform: translateY(100%);
-			-webkit-transform: translateY(100%);
-			-ms-transform: translateY(100%);
-			transform: translateY(100%);
+			-moz-transform: translateY(0);
+			-webkit-transform: translateY(0);
+			-ms-transform: translateY(0);
+			transform: translateY(0);
 		}
 
 		@media screen and (max-width: 736px) {

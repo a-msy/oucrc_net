@@ -229,13 +229,25 @@
 					else{
 						insert += '<td data-label="" class="txt">'+''+'</td>';
 					}
-					insert += '<td data-label="してること : " class="txt">'+csvlist[i][2]+'</td>';
-					insert += '<td data-label="ひとこと : " class="txt">'+csvlist[i][3]+'</td>';
+
+					if(csvlist[i][2]!=''){
+						insert += '<td data-label="してること : " class="txt">'+csvlist[i][2]+'</td>';
+					}
+					else{
+						insert += '<td data-label="" class="txt">'+''+'</td>';
+					}
+
+					if(csvlist[i][3]!=''){
+						insert += '<td data-label="ひとこと : " class="txt">'+csvlist[i][3]+'</td>';
+					}
+					else{
+						insert += '<td data-label="" class="txt">'+''+'</td>';
+					}
 					insert += "</tr>";
 				}
 				$(target).append(insert);
 			}
-			var csvfile = 'assets/csv/itemlist.csv';
+			var csvfile = 'assets/csv/HP.csv';
 			$(function(){
 				$.get(csvfile, readCsv, 'text');
 			});
@@ -259,7 +271,7 @@
 				}
 				$(target).append(insert);
 			}
-			var csvfile2 = 'assets/csv/itemlist.csv';
+			var csvfile2 = 'assets/csv/file.csv';
 			$(function(){
 				$.get(csvfile2, readCsv2, 'text');
 			});
