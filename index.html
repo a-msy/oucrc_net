@@ -133,7 +133,7 @@
 					<!-- Gallery  -->
 						<div class="gallery">
 							<article class="from-left">
-								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+								<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="i10jan-部室の開閉状態を通知" alt="" /></a>
 							</article>
 							<article class="from-right">
 								<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
@@ -162,7 +162,17 @@
 						<h2>MEMBERS</h2>
 					</header>
 					<div class="box">
-						<h3>現役部員</h3>
+					<!-- 折り畳み展開ポインタ -->
+					<h3>現役部員</h3>
+					<div onclick = "obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+						<a style="cursor:pointer;">▼　展開する　▼</a>
+					</div>
+					<!--// 折り畳み展開ポインタ -->
+
+					<!-- 折り畳まれ部分 -->
+					<div id="open" style="display:none;clear:both;">
+
+					<!--ここの部分が折りたたまれる＆展開される部分になります。自由に記述してください。-->
 							<table>
         						<thead>
             						<tr>
@@ -175,6 +185,9 @@
         						<tbody id="csv-body">
 								</tbody>
     						</table>
+					</div>
+					<!--// 折り畳まれ部分 -->
+							<!--
 						<h3>OB/OG</h3>
 						<table>
         						<thead>
@@ -188,7 +201,7 @@
 								編集中です.
         						<tbody id="csv-og">
 								</tbody>
-    						</table>
+    						</table>-->
 					</div>
 				</div>
 			</section>
