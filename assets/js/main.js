@@ -259,19 +259,12 @@
 				for (var i = 0; i < csvlist.length; i++) {
 					insert += "<tr>";
 					insert += "<th>"+csvlist[i][0]+"</th>";
-					if(csvlist[i][1]!=''){
-						insert += '<td data-label="役職 : " class="txt">'+csvlist[i][1]+'</td>';
-					}
-					else{
-						insert += '<td data-label="" class="txt">'+''+'</td>';
-					}
-					insert += '<td data-label="してること : " class="txt">'+csvlist[i][2]+'</td>';
-					insert += '<td data-label="ひとこと : " class="txt">'+csvlist[i][3]+'</td>';
+					insert += '<td data-label="年度 : " class="txt">'+csvlist[i][1]+'</td>';
 					insert += "</tr>";
 				}
 				$(target).append(insert);
 			}
-			var csvfile2 = 'assets/csv/file.csv';
+			var csvfile2 = 'assets/csv/OB.csv';
 			$(function(){
 				$.get(csvfile2, readCsv2, 'text');
 			});
