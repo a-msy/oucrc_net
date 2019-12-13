@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>OUCRC</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="岡山大学電子計算機研究会">
+    <meta name="keywords" content="OUCRC,電子計算機研究会,岡山大学">
+    <!-- Load CSS -->
+    <link href="../../../css/normalize.css" rel="stylesheet">
+    <link href="../../../css/master.css" rel="stylesheet">
+    <link href="../../../css/jquery.bxslider.css" rel="stylesheet">
+    <!-- <link href="css/colorbox.css" rel="stylesheet"> -->
+    <link href="../../../css/gridsystem.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topmenu clearfix">
+        <div class="topnav">
+            <div class="circle_logo1">
+                <a href="http://oucrc.net">
+                    <img src="../../../img/oucrc_logo2.png" />
+                </a>
+            </div>
+        </div>
+        <nav id=mainMenubar>
+            <ul>
+                <li class="current">
+                    <a href="http://oucrc.net">トップ</a>
+                </li>
+                <li>
+                    <a href="../../../products.html">作品紹介</a>
+                </li>
+                <li>
+                    <a href="../../../activity.html">活動記録</a>
+                </li>
+                <li>
+                    <a href="../../../members.html">部員</a>
+                </li>
+                <li>
+                    <a href="../../../newstudent.html">入部案内</a>
+                </li>
+                <li>
+                    <a href="../../../map.html">アクセス</a>
+                </li>
+                <li>
+                    <a href="../../../links.html">リンク</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container_16">
+        <div class="grid_16 banner_slider">
+            <ul class="comike_slider">
+                <li>
+                    <img src="./img/PrimeDaifugo_1.png" />
+                </li>
+                <li>
+                    <img src="./img/PrimeDaifugo_2.png" />
+                </li>
+            </ul>
+        </div>
+        <div class="grid_16 clearfix">
+            <div class="comike_title">
+                <h1>素数大富豪</h1>
+                <h2>まめぱと / にゃる / ぴまなや</h2>
+            </div>
+            <section>
+                <h1>概要</h1>
+                <p>
+                    初めてのゲーム制作として、個人的にとても好きだった「素数大富豪」をC++のDxLibで作成しました。 実装内容は素数だし（複数枚も可）、ペナルティで、合成数出しやラマヌジャン革命は実装できませんでした。 ゲーム内での表示関係により、手札枚数を制限する形式にしました。（最大10枚）
+                    <br> ゲームは1人用になっており、CPU4人との対戦になります。 CPUの行動Routineは以下のようになっています。 初出しの時は、乱数を用いて何枚出しにするか決定し、その枚数に応じた素数候補を考えます。
+                    <br> CPUは100未満の素数については把握しており、3桁以上の素数についてはCPUの強さに応じて把握しています。 把握できていない範囲の数値については2,3,5(,7,11)の倍数について判定し、その後は乱数で選択します。(カッコ内は強さに応じて判定してます)
+                    <br> コンフィグにてCPUの強さ、初期枚数、上限枚数の設定ができます。
+                </p>
+                <h1>担当</h1>
+                <p>
+                    企画、プログラム：まめぱと
+                    <br> グラフィック：にゃる
+                    <br> 音楽：ぴまなや
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer_menu">
+            <div class="footer_nav">
+                <small>©2018 |
+                    <a href="mailto:webmaster@oucrc.net">岡山大学電子計算機研究会</a>
+                </small>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load jquery -->
+    <script src="../../../js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../../js/lavalamp-0.2.0/jquery.easing.min.js"></script>
+    <script src="../../../js/lavalamp-0.2.0/jquery.lavalamp.min.js"></script>
+    <script src="../../../js/lavalamp-0.2.0/lavalamp_define.js"></script>
+    <script src="../../../js/bxslider/jquery.bxslider.min.js"></script>
+    <script src="../../../js/bxslider/bxslider_define.js"></script>
+    <script src="../../../js/easing/jquery.easing.1.3.js"></script>
+    <!-- Load Font -->
+    <!-- <script type="text/javascript" src="//typesquare.com/accessor/script/typesquare.js?4E7F3s69yuc%3D&fadein=0" charset="utf-8"></script> -->
+</body>
+
+</html>
