@@ -2597,3 +2597,7 @@ ul.cp_list li:before {
 	-webkit-transform: translateY(-12px) rotate(45deg);
 	transform: translateY(-12px) rotate(45deg);
 }
+
+a{
+	color:white;
+}

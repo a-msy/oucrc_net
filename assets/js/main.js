@@ -258,7 +258,12 @@
 				var insert = '';
 				for (var i = 0; i < csvlist.length; i++) {
 					insert += "<tr>";
-					insert += "<th>"+csvlist[i][0]+"</th>";
+					if (csvlist[i][2] != "") {
+						insert += "<th>"+'<a href="members/'+csvlist[i][2]+'.html">'+csvlist[i][0]+"</a></th>";
+					}
+					else {
+						insert += "<th>"+csvlist[i][0]+"</a></th>";
+					}
 					insert += '<td data-label="年度 : " class="txt">'+csvlist[i][1]+'</td>';
 					insert += "</tr>";
 				}
